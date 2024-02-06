@@ -182,18 +182,32 @@ transform: skew(-10deg);
     background-color: limegreen;
   
 }
-.emeg5:hover * .emeg3 /*test*/{
+.emeg5:hover ~ .emeg3 /*test*/{
     transform: scale(2);
     background-color: limegreen;
     border-width: 2px;
     border-color: black;
     position: relative;
-    left: -50px;
+    left: -100px;
 }
 .btn-learn:hover{
     background-color: aqua;
     transform: scale(1.1);
     border-width: 4px;
+}
+.header-logo p {
+    display: none;
+    transition: .2s all ease-in-out; /*не працює */
+}
+.header-logo__link:hover + p{
+    display: flex;
+    position: absolute;
+    color: green;
+    transition: .2s all ease-in-out; /*не працює */
+}
+::selection {
+    color: red;
+    background-color: aqua;
 }
 #header-icon {
     display: none;
